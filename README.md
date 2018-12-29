@@ -15,6 +15,11 @@ So next time you want to write a loop, for some business reason, ask yourself an
 
 This example can clearly show you the difference.
 
+in the functions:
+repeatedStringElegant
+repeatedStringOldSchool
+
+you can see how cleaner the repeatedStringElegant looks like compared to repeatedStringOldSchool!
 # Problem:
 ### a simple problem from HackerRank:
 
