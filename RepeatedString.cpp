@@ -1,8 +1,5 @@
-
 #include "stdafx.h"
-#include<iostream>
-#include<algorithm>
-using namespace std;
+#include "RepeatedString.h"
 
 // elegant approach using STL and lambdas
 unsigned long long  repeatedStringElegant(string s, unsigned long long n) {
@@ -10,9 +7,9 @@ unsigned long long  repeatedStringElegant(string s, unsigned long long n) {
 
 	unsigned long long count = (count_if(begin(s), end(s), is_a)) * (n / s.size());
 
-	int more_letter_to_check = n % s.size();
+	int more_letters_to_check = n % s.size();
 
-	return count += count_if(begin(s), begin(s) + more_letter_to_check, is_a);
+	return count += count_if(begin(s), begin(s) + more_letters_to_check, is_a);
 
 }
 
@@ -33,13 +30,6 @@ unsigned long long  repeatedStringOldSchool(string s, unsigned long long n) {
 			count++;
 
 	return count;
-}
-int main()
-{
-	string s = "aba";
-	cout << repeatedStringElegant(s, 10) << endl;
-	cout << repeatedStringOldSchool(s, 10) << endl;
-	return 0;
 }
 
 
